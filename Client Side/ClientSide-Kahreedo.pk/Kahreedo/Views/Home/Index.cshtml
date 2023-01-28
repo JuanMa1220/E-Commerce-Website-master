@@ -3,7 +3,7 @@
     ViewBag.Title = "Index";
 }
 
-<!-- Start slider -->
+<!-- Inicio del slider -->
 <section id="aa-slider">
     <div class="aa-slider-area">
         <div id="sequence" class="seq">
@@ -25,34 +25,35 @@
                             </div>
                         </li>
                     }
-                    <!-- end single slide item -->
+                    <!-- fin single slide item -->
 
                 </ul>
             </div>
-            <!-- slider navigation btn -->
+            <!-- boton del slider navegacion -->
             <fieldset class="seq-nav" aria-controls="sequence" aria-label="Slider buttons">
-                <a type="button" href="" class="seq-prev" aria-label="Previous"><span class="fa fa-angle-left"></span></a>
-                <a type="button" href="" class="seq-next" aria-label="Next"><span class="fa fa-angle-right"></span></a>
+                <a type="button" href="" class="seq-prev" aria-label="Previo"><span class="fa fa-angle-left"></span></a>
+                <a type="button" href="" class="seq-next" aria-label="Siguiente"><span class="fa fa-angle-right"></span></a>
             </fieldset>
         </div>
     </div>
 </section>
 <!-- / slider -->
-<!-- Start Promo section -->
+
+<!-- inicio de la Promo section -->
 <section id="aa-promo">
     <div class="container">
         <div class="row">
             <div class="col-md-12">
                 <div class="aa-promo-area">
                     <div class="row">
-                        <!-- promo left -->
+                        <!-- promo isquierda -->
                         <div class="col-md-5 no-padding">
                             <div class="aa-promo-left">
                                 <div class="aa-promo-banner">
                                     <img src="~/Content/img/promo-banner-womens.jpg" alt="img">
                                     <div class="aa-prom-content">
-                                        <span>75% Off</span>
-                                        <h4><a href="@Url.Action("GetProductsByCategory", "Product", new { @categoryName = "Women" })">For Women</a></h4>
+                                        <span>75% Descuento</span>
+                                        <h4><a href="@Url.Action("GetProductsByCategory", "Product", new { @categoryName = "Women" })">Para mujer</a></h4>
                                     </div>
                                 </div>
                             </div>
@@ -92,10 +93,10 @@
                         <div class="aa-product-inner">
                             <!-- start prduct navigation -->
                             <ul class="nav nav-tabs aa-products-tab">
-                                <li class="active"><a href="#men" data-toggle="tab">Men</a></li>
-                                <li><a href="#women" data-toggle="tab">Women</a></li>
-                                <li><a href="#sports" data-toggle="tab">Sports</a></li>
-                                <li><a href="#electronics" data-toggle="tab">Electronics</a></li>
+                                <li class="active"><a href="#men" data-toggle="tab">Hombre</a></li>
+                                <li><a href="#women" data-toggle="tab">Mujer</a></li>
+                                <li><a href="#sports" data-toggle="tab">Deportes</a></li>
+                                <li><a href="#electronics" data-toggle="tab">Electronica</a></li>
                             </ul>
                             <!-- Tab panes -->
                             <div class="tab-content">
@@ -110,7 +111,7 @@
                                         <!-- end start single product item -->
 
                                     </ul>
-                                    <a class="aa-browse-btn" href="#">Browse all Product <span class="fa fa-long-arrow-right"></span></a>
+                                    <a class="aa-browse-btn" href="#">Ir a los Productos <span class="fa fa-long-arrow-right"></span></a>
                                 </div>
 
                                 <!-- start women product category -->
@@ -124,7 +125,7 @@
                                         <!-- end start single product item -->
 
                                     </ul>
-                                    <a class="aa-browse-btn" href="#">Browse all Product <span class="fa fa-long-arrow-right"></span></a>
+                                    <a class="aa-browse-btn" href="#">Ir a los productos <span class="fa fa-long-arrow-right"></span></a>
                                 </div>
 
                                 <!-- start sports product category -->
@@ -138,7 +139,7 @@
                                         <!-- end start single product item -->
 
                                     </ul>
-                                    <a class="aa-browse-btn" href="#">Browse all Product <span class="fa fa-long-arrow-right"></span></a>
+                                    <a class="aa-browse-btn" href="#">Ir a los pruductos <span class="fa fa-long-arrow-right"></span></a>
 
                                 </div>
 
@@ -153,7 +154,7 @@
                                         <!-- end start single product item -->
 
                                     </ul>
-                                    <a class="aa-browse-btn" href="#">Browse all Product <span class="fa fa-long-arrow-right"></span></a>
+                                    <a class="aa-browse-btn" href="#">Ir a los productos <span class="fa fa-long-arrow-right"></span></a>
 
                                 </div>
                                 <!-- / electronic product category -->
@@ -200,13 +201,13 @@
                                                 <!-- Modal view content -->
                                                 <div class="col-md-6 col-sm-6 col-xs-12">
                                                     <div class="aa-product-view-content">
-                                                        <h3>T-Shirt</h3>
+                                                        <h3>Camiseta</h3>
                                                         <div class="aa-price-block">
                                                             <span class="aa-product-view-price">$34.99</span>
-                                                            <p class="aa-product-avilability">Avilability: <span>In stock</span></p>
+                                                            <p class="aa-product-avilability">Disponibles: <span>En stock</span></p>
                                                         </div>
-                                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officiis animi, veritatis quae repudiandae quod nulla porro quidem, itaque quis quaerat!</p>
-                                                        <h4>Size</h4>
+                                                        @*<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officiis animi, veritatis quae repudiandae quod nulla porro quidem, itaque quis quaerat!</p>*@
+                                                        <h4>Talla</h4>
                                                         <div class="aa-prod-view-size">
                                                             <a href="#">S</a>
                                                             <a href="#">M</a>
@@ -225,12 +226,12 @@
                                                                 </select>
                                                             </form>
                                                             <p class="aa-prod-category">
-                                                                Category: <a href="#">Polo T-Shirt</a>
+                                                                Categoria: <a href="#">Polo camiseta</a>
                                                             </p>
                                                         </div>
                                                         <div class="aa-prod-view-bottom">
-                                                            <a href="#" class="aa-add-to-cart-btn"><span class="fa fa-shopping-cart"></span>Add To Cart</a>
-                                                            <a href="#" class="aa-add-to-cart-btn">View Details</a>
+                                                            <a href="#" class="aa-add-to-cart-btn"><span class="fa fa-shopping-cart"></span>Agregar al carrito</a>
+                                                            @*<a href="#" class="aa-add-to-cart-btn">View Details</a>*@
                                                         </div>
                                                     </div>
                                                 </div>
@@ -271,8 +272,8 @@
                         <!-- start prduct navigation -->
                         <ul class="nav nav-tabs aa-products-tab">
                             <li class="active"><a href="#popular" data-toggle="tab">Popular</a></li>
-                            <li><a href="#featured" data-toggle="tab">Featured</a></li>
-                            <li><a href="#latest" data-toggle="tab">Latest</a></li>
+                            <li><a href="#featured" data-toggle="tab">Presentadas</a></li>
+                            <li><a href="#latest" data-toggle="tab">Ultimo</a></li>
                         </ul>
                         <!-- Tab panes -->
                         <div class="tab-content">
@@ -287,7 +288,7 @@
                                     <!-- end start single product item -->
 
                                 </ul>
-                                <a class="aa-browse-btn" href="#">Browse all Product <span class="fa fa-long-arrow-right"></span></a>
+                                <a class="aa-browse-btn" href="#">Explorar todos los productos <span class="fa fa-long-arrow-right"></span></a>
                             </div>
                             <!-- / popular product category -->
                             <!-- start featured product category -->
@@ -301,7 +302,7 @@
                                     <!-- end start single product item -->
 
                                 </ul>
-                                <a class="aa-browse-btn" href="#">Browse all Product <span class="fa fa-long-arrow-right"></span></a>
+                                <a class="aa-browse-btn" href="#">Explorar todos los productos <span class="fa fa-long-arrow-right"></span></a>
                             </div>
                             <!-- / featured product category -->
                             <!-- start latest product category -->
@@ -315,7 +316,7 @@
                                     <!-- end start single product item -->
 
                                 </ul>
-                                <a class="aa-browse-btn" href="#">Browse all Product <span class="fa fa-long-arrow-right"></span></a>
+                                <a class="aa-browse-btn" href="#">Explorar todos los productos <span class="fa fa-long-arrow-right"></span></a>
                             </div>
                             <!-- / latest product category -->
                         </div>

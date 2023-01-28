@@ -1,6 +1,6 @@
 ﻿@model IEnumerable<Khareedo.Models.Wishlist>
 @{
-    ViewBag.Title = "Wishlist";
+    ViewBag.Title = "WishList";
 }
 
  <!-- catg header banner section -->
@@ -9,10 +9,10 @@
     <div class="aa-catg-head-banner-area">
         <div class="container">
             <div class="aa-catg-head-banner-content">
-                <h2>Wishlist Page</h2>
+                <h2>Pagina de la lista de Deseos</h2>
                 <ol class="breadcrumb">
                     <li><a href="index.html">Home</a></li>
-                    <li class="active">Wishlist</li>
+                    <li class="active">Lista de Deseos</li>
                 </ol>
             </div>
         </div>
@@ -28,15 +28,15 @@
                     <div class="cart-view-table aa-wishlist-table">
                         <form action="">
                             <div class="table-responsive">
-                                <table class="table">
+                                <table class="table">   
                                     <thead>
                                         <tr>
-                                            <th></th>
-                                            <th></th>
-                                            <th>Product</th>
-                                            <th>Price</th>
-                                            <th>Stock Status</th>
-                                            <th></th>
+                                            <th>Eliminar</th>
+                                            <th>Imagen</th>
+                                            <th>Producto</th>
+                                            <th>Precio</th>
+                                            <th>Estado del inventario</th>
+                                            <th>Total</th>
                                         </tr>
                                     </thead>
                                     <tbody>
@@ -53,10 +53,10 @@
                                                 <td>
                                                     @if (item.Product.UnitInStock > 0)
                                                     {
-                                                        <text>In Stock (@item.Product.UnitInStock)</text>
+                                                        <text>En Stock (@item.Product.UnitInStock)</text>
                                                     }
                                                     else
-                                                    { <text>Out of Stock (@item.Product.UnitInStock)</text>}
+                                                    { <text>Agotado(@item.Product.UnitInStock)</text>}
                                                 </td>
                                                 <td><a href="@Url.Action("AddToCart", "WishList", new { id=item.WishlistID})" class="aa-add-to-cart-btn">Add To Cart</a></td>
                                             </tr>                                       
@@ -64,7 +64,7 @@
                                         }
                                         else
                                         {
-                                            <text>Please login to view wishlist</text> 
+                                            <text>Inicia sesion para ver tu lista de deseos</text> 
                                         }
                                     </tbody>
                                 </table>
@@ -76,6 +76,6 @@
         </div>
     </div>
 </section>
-<!-- / Cart view section -->
+<!-- / Seccion vista del carrito-->
 
 

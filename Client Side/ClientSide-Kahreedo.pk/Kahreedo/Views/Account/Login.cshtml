@@ -12,49 +12,49 @@
                     <div class="row">
                         <div class="col-md-6">
                             <div class="aa-myaccount-login">
-                                <h4>Login</h4>
+                                <h4>Acceso</h4>
                                
                             @using (Html.BeginForm("Login", "Account", FormMethod.Post, new { @class = "aa-login-form" }))
                                 {
-                                    <label for="">Username or Email address<span>*</span></label>
-                                    <input name="UserName" type="text" required placeholder="Username">
-                                    <label for="">Password<span>*</span></label>
-                                    <input name="Password" type="password" required placeholder="Password">
-                                    <button type="submit" class="aa-browse-btn">Login</button>
-                                    <label class="rememberme" for="rememberme"><input type="checkbox" id="rememberme"> Remember me </label>
-                                    <p class="aa-lost-password"><a href="#">Lost your password?</a></p>
+                                    <label for="">Usuario o Correo Electronico<span>*</span></label>
+                                    <input name="Nombre Usuario" type="text" required placeholder="Usuario">
+                                    <label for="">Contraseña<span>*</span></label>
+                                    <input name="Password" type="password" required placeholder="contraseña">
+                                    <button type="submit" class="aa-browse-btn">Logeo</button>
+                                    <label class="rememberme" for="rememberme"><input type="checkbox" id="rememberme"> Recordarme </label>
+                                    <p class="aa-lost-password"><a href="#">olvidaste tu contraseña?</a></p>
                             }
                                 
                             </div>
                         </div>
                         <div class="col-md-6">
                             <div class="aa-myaccount-register">
-                                <h4>Register</h4>
+                                <h4>Registro</h4>
 
                                 @using (Html.BeginForm("Register", "Account", FormMethod.Post, new { @class = "aa-login-form" }))
                                 {
-                                    <label for="">First Name<span>*</span></label>
-                                    <input name="First_Name" type="text" placeholder="Enter first name">
+                                    <label for="">Nombre<span>*</span></label>
+                                    <input name="First_Name" type="text" placeholder="Ingrese nombre">
 
-                                    <label for="">Last Name<span>*</span></label>
-                                    <input name="Last_Name" type="text" placeholder="Enter last name">
+                                    <label for="">Apellido<span>*</span></label>
+                                    <input name="Last_Name" type="text" placeholder="Ingrese apellido">
 
-                                    <label for="">Username<span>*</span></label>
-                                    <input name="UserName" type="text" placeholder="Username">
+                                    <label for="">Nombre Usuario<span>*</span></label>
+                                    <input name="UserName" type="text" placeholder="Nombre Usuario">
 
-                                    <label for="">Password<span>*</span></label>
-                                    <input name="Password" type="password" placeholder="Password">
+                                    <label for="">Contraseña<span>*</span></label>
+                                    <input name="Password" type="password" placeholder="Contraseña">
 
-                                    <label for="">Email<span>*</span></label>
-                                    <input name="Email" type="text" placeholder="Enter your email">
+                                    <label for="">Correo<span>*</span></label>
+                                    <input name="Email" type="text" placeholder="Ingrese su correo">
 
-                                    <label for="">Mobile<span>*</span></label>
-                                    <input name="Mobile1" type="text" placeholder="Mobile">
+                                    <label for="">Telefono<span>*</span></label>
+                                    <input name="Mobile1" type="text" placeholder="Telefono">
 
-                                    <label for="">Address<span></span></label>
-                                    <input name="Address1" type="text" placeholder="Address">
+                                    <label for="">Direccion<span></span></label>
+                                    <input name="Address1" type="text" placeholder="Direccion">
 
-                                    <button type="submit" class="aa-browse-btn">Register</button>
+                                    <button type="submit" class="aa-browse-btn">Registrar</button>
                                 }
 
                             </div>

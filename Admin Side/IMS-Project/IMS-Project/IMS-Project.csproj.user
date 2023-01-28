@@ -11,6 +11,7 @@
     <WebStackScaffolding_DbContextTypeFullName>IMS_Project.Models.KahreedoEntities</WebStackScaffolding_DbContextTypeFullName>
     <ProjectView>ProjectFiles</ProjectView>
     <NameOfLastUsedPublishProfile>IMS-Project1 - Web Deploy</NameOfLastUsedPublishProfile>
+    <LastActiveSolutionConfig>Debug|Any CPU</LastActiveSolutionConfig>
   </PropertyGroup>
   <ProjectExtensions>
     <VisualStudio>

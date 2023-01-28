@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Khareedo.pk | @ViewBag.Title</title>
+    <title>UMB ecommerce @*@ViewBag.Title*@</title>
 
     @Styles.Render("~/Content/css")
     
@@ -32,7 +32,7 @@
     <!-- wpf loader Two -->
     <div id="wpf-loader-two">
         <div class="wpf-loader-two-inner">
-            <span>Loading</span>
+            <span>Cargando</span>
         </div>
     </div>
     <!-- / wpf loader Two -->
@@ -51,25 +51,31 @@
                             <div class="aa-header-top-left">
                                 <!-- start language -->
                                 <div class="aa-language">
+
+                                   <!-- aqui estan las secciones de los idiomas a los que se puede cambiar la pguina --> 
                                     <div class="dropdown">
-                                        <a class="btn dropdown-toggle" href="#" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-                                            <img src="~/Content/img/flag/english.jpg" alt="english flag">ENGLISH
+                                        <!--<a class="btn dropdown-toggle" href="#" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                                            <img src="~/Content/img/flag/english.jpg" alt="english flag">ENGLISH-->
                                             @*<span class="caret"></span>*@
-                                        </a>
+                                        <!--</a>-->
                                         @*<ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
                                             <li><a href="#"><img src="~/Content/img/flag/french.jpg" alt="">FRENCH</a></li>
                                             <li><a href="#"><img src="~/Content/img/flag/english.jpg" alt="">ENGLISH</a></li>
                                         </ul>*@
                                     </div>
+
+
                                 </div>
                                 <!-- / language -->
+
+
                                 <!-- start currency -->
                                 <div class="aa-currency">
-                                    <div class="dropdown">
+                                    <!--<div class="dropdown">
                                         <a class="btn dropdown-toggle" href="#" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-                                            <i class="fa fa-money"></i>PKR
+                                            <i class="fa fa-money"></i>PKR-->
                                             @*<span class="caret"></span>*@
-                                        </a>
+                                        <!--</a>-->
                                         @*<ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
                                             <li><a href="#"><i class="fa fa-euro"></i>EURO</a></li>
                                             <li><a href="#"><i class="fa fa-usd"></i>USD</a></li>
@@ -77,20 +83,24 @@
                                     </div>
                                 </div>
                                 <!-- / currency -->
+
+
                                 <!-- start cellphone -->
-                                <div class="cellphone hidden-xs">
+                                @*<div class="cellphone hidden-xs">
                                     <p><span class="fa fa-phone"></span>021-6558-6588</p>
-                                </div>
+                                </div>*@
                                 <!-- / cellphone -->
+
+
                             </div>
                             <!-- / header top left -->
                             <div class="aa-header-top-right">
                                 <ul class="aa-head-top-nav-right">
                                     
-                                    <li><a href="@(Session["username"] != null ? Url.Action("Index", "Account") : Url.Action("Login", "Account"))">My Account</a></li>                                    
-                                    <li class="hidden-xs"><a href="@(Session["username"] != null ? Url.Action("Index", "WishList") : Url.Action("Login", "Account"))">Wishlist @if(@ViewBag.WlItemsNo > 0 ){ <text>(@ViewBag.WlItemsNo)</text> }</a></li>
-                                    <li class="hidden-xs"><a href="@(Session["username"] != null ? Url.Action("Index", "MyCart") : Url.Action("Login", "Account"))">My Cart @if (@ViewBag.NoOfItem > 0){ <text>(@ViewBag.NoOfItem)</text> }</a></li>
-                                    <li class="hidden-xs"><a href="@(Session["username"] != null ? Url.Action("Index", "CheckOut") : Url.Action("Login", "Account"))">Checkout</a></li>
+                                    <li><a href="@(Session["username"] != null ? Url.Action("Index", "Account") : Url.Action("Login", "Account"))">Mi Cuenta</a></li>                                    
+                                    <li class="hidden-xs"><a href="@(Session["username"] != null ? Url.Action("Index", "WishList") : Url.Action("Login", "Account"))">Lista de deseos @if(@ViewBag.WlItemsNo > 0 ){ <text>(@ViewBag.WlItemsNo)</text> }</a></li>
+                                    <li class="hidden-xs"><a href="@(Session["username"] != null ? Url.Action("Index", "MyCart") : Url.Action("Login", "Account"))">Mi carrito @if (@ViewBag.NoOfItem > 0){ <text>(@ViewBag.NoOfItem)</text> }</a></li>
+                                    <li class="hidden-xs"><a href="@(Session["username"] != null ? Url.Action("Index", "CheckOut") : Url.Action("Login", "Account"))">Verificar</a></li>
                                     @if (Session["username"]==null)
                                     {                          
                                         
@@ -98,7 +108,7 @@
                                     }
                                     else
                                     {
-                                        <li><a href="@Url.Action("Logout","Account")">Logout</a></li>
+                                        <li><a href="@Url.Action("Logout","Account")">Cerrar sesión</a></li>
                                         <li><a href="" >@Session["username"]</a></li>
                                     }
                                 </ul>
@@ -120,7 +130,7 @@
                                 <!-- Text based logo -->
                                 <a href="@Url.Action("Index","Home")">
                                     <span class="fa fa-shopping-cart"></span>
-                                    <p>Khareedo<strong>.pk</strong> <span>Your Shopping Partner</span></p>
+                                    <p>UMB ecommerce<strong>.com</strong> <span>Su socio de compras</span></p>
                                 </a>
                                 <!-- img based logo -->
                                 <!-- <a href="index.html"><img src="~/Content/img/logo.jpg" alt="logo img"></a> -->
@@ -130,7 +140,7 @@
                             <div class="aa-cartbox">
                                 <a class="aa-cart-link" href="#">
                                     <span class="fa fa-shopping-basket"></span>
-                                    <span class="aa-cart-title">SHOPPING CART</span>
+                                    <span class="aa-cart-title">Carrito de Compras</span>
                                     <span class="aa-cart-notify">@(ViewBag.NoOfItem==null ? 0 :ViewBag.NoOfItem)</span>
                                 </a>
                                 <div class="aa-cartbox-summary">
@@ -158,9 +168,11 @@
                 </div>
             </div>
         </div>
+
         <!-- / header bottom  -->
     </header>
     <!-- / header section -->
+
     <!-- menu -->
     <section id="menu">
         <div class="container">
@@ -169,7 +181,7 @@
                 <div class="navbar navbar-default" role="navigation">
                     <div class="navbar-header">
                         <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                            <span class="sr-only">Toggle navigation</span>
+                            <span class="sr-only">Navegacion de palanca</span>
                             <span class="icon-bar"></span>
                             <span class="icon-bar"></span>
                             <span class="icon-bar"></span>
@@ -219,13 +231,13 @@
     @RenderBody()
    
     <!-- Subscribe section -->
-    <section id="aa-subscribe">
+    @*<section id="aa-subscribe">
         <div class="container">
             <div class="row">
                 <div class="col-md-12">
                     <div class="aa-subscribe-area">
-                        <h3>Subscribe our newsletter </h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex, velit!</p>
+                        <h3>Suscribete a nuestro boletin </h3>
+                        <p>!</p>
                         <form action="" class="aa-subscribe-form">
                             <input type="email" name="" id="" placeholder="Enter your Email">
                             <input type="submit" value="Subscribe">
@@ -234,12 +246,19 @@
                 </div>
             </div>
         </div>
-    </section>
+    </section>*@
+
     <!-- / Subscribe section -->
+
+
     <!-- footer -->
-    <footer id="aa-footer">
+
+
+    @*<footer id="aa-footer">*@
+
         <!-- footer bottom -->
-        <div class="aa-footer-top">
+
+        @*<div class="aa-footer-top">
             <div class="container">
                 <div class="row">
                     <div class="col-md-12">
@@ -308,9 +327,9 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </div>*@
         <!-- footer-bottom -->
-        <div class="aa-footer-bottom">
+        @*<div class="aa-footer-bottom">
             <div class="container">
                 <div class="row">
                     <div class="col-md-12">
@@ -327,7 +346,7 @@
                 </div>
             </div>
         </div>
-    </footer>
+    </footer>*@
     <!-- / footer -->
    
     @Scripts.Render("~/Content/js")

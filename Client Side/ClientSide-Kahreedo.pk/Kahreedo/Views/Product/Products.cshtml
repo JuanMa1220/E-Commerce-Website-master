@@ -43,6 +43,7 @@
     </section>
 }
 <!-- / catg header banner section -->
+
 <!-- product category -->
 <section id="aa-product-category">
     <div class="container">
@@ -54,16 +55,16 @@
                             @using (Html.BeginForm("GetAllProducts", "Product", FormMethod.Post, new {@id="ssForm" ,  categoryName = Request.QueryString["categoryName"]}))
                             { 
                                 
-                                <label for="">Sort by</label>
+                                <label for="">Ordenar por</label>
                                 <select name="sortBy"  >
                                     <option value="Default" selected> Default</option>
                                     @*<option href="@Url.Action("GetAllProducts", new { categoryName = Request.QueryString["categoryName"], sortBy = Request.QueryString["sortBy"] })" value="Name">Name</option>*@
-                                    <option value="Name"> Name</option>
-                                    <option value="Price">Price</option>
-                                    <option value="Date">Date</option>
+                                    <option value="Name"> Nombre</option>
+                                    <option value="Price">Precio</option>
+                                    <option value="Date">Fecha</option>
                                 </select>
                             
-                                <label for="">Show</label>
+                                <label for="">Espectaculo</label>
                                 <select name="showNoProducts" onchange="">
                                     <option value="6" selected>6</option>
                                     <option value="9">9</option>
@@ -89,7 +90,7 @@
                             }
                             else { 
                                 
-                            <h3>Sorry! There is no Product available</h3>
+                            <h3>No hay productos disponibles</h3>
                             }
                             <!-- end start single product item -->
                            
@@ -134,7 +135,7 @@
                 <aside class="aa-sidebar">
                     <!-- single sidebar -->
                     <div class="aa-sidebar-widget">
-                        <h3>Category</h3>
+                        <h3>Categoria</h3>
                         <ul class="aa-catg-nav">
                             @foreach (var item in ViewBag.Categories)
                             {       
@@ -144,20 +145,21 @@
                     </div>
                     <!-- single sidebar -->
                     <div class="aa-sidebar-widget">
-                        <h3>Tags</h3>
+                        <h3>Etiquetas</h3>
                         <div class="tag-cloud">
-                            <a href="#">Fashion</a>
-                            <a href="#">Ecommerce</a>
-                            <a href="#">Shop</a>
-                            <a href="#">Hand Bag</a>
+                            <a href="#">Moda</a>
+                            <a href="#">Comercio electrónico</a>
+                            <a href="#">Comercio</a>
+                            <a href="#">bolso de mano</a>
                             <a href="#">Laptop</a>
-                            <a href="#">Head Phone</a>
-                            <a href="#">Pen Drive</a>
+                            <a href="#">Telefono</a>
+                            <a href="#">Memoria USB</a>
+                              
                         </div>
                     </div>
                     <!-- single sidebar -->
                     <div class="aa-sidebar-widget">
-                        <h3>Shop By Price</h3>
+                        <h3>Comprar por precio</h3>
                         <!-- price range -->
                         <div class="aa-sidebar-price-range">                         
 
@@ -167,8 +169,8 @@
                                  <input type="range"  min="0" max="100" onchange="updateMinInput(this.value);"> <br />
                                 <input type="range"  min="0" max="100" onchange="updateMaxInput(this.value);">
                              <br />
-    <input type="number" name="minPrice" id="minValue" min="0" maxlength="6" max="999999" value="00" size="6" >
-    <input type="number" name="maxPrice" id="maxValue" min="0" maxlength="6" max="999999"  value="00" size="6" >    <br /><br />
+                             <input type="number" name="minPrice" id="minValue" min="0" maxlength="6" max="999999" value="00" size="6" >
+                               <input type="number" name="maxPrice" id="maxValue" min="0" maxlength="6" max="999999"  value="00" size="6" >    <br /><br />
                                 <button class="aa-filter-btn" type="submit">Filter</button>
 
                             }
@@ -195,7 +197,7 @@
                     </div>*@
                     <!-- single sidebar -->
                     <div class="aa-sidebar-widget">
-                        <h3>Top Sold Products</h3>
+                        <h3>Productos más vendidos</h3>
                         <div class="aa-recently-views">
                             <ul>
                                 @foreach (Khareedo.Models.TopSoldProduct item in ViewBag.TopRatedProducts)
@@ -214,7 +216,7 @@
                     </div>
                     <!-- single sidebar -->
                     <div class="aa-sidebar-widget">
-                        <h3>Recently Views</h3>
+                        <h3>Vistos Recientemente</h3>
                         <div class="aa-recently-views">
                             <ul>
                                @foreach (Khareedo.Models.Product item in ViewBag.RecentViewsProducts)

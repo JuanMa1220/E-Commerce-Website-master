@@ -93,7 +93,7 @@ namespace Khareedo.Controllers
 
         }
 
-        //VIEW DETAILS
+        //Vista de los detalles 
         public ActionResult ViewDetails(int id)
         {
             var prod = db.Products.Find(id);
@@ -145,7 +145,7 @@ namespace Khareedo.Controllers
             }
         }
 
-        //ADD REVIEWS ABOUT PRODUCT
+        //AGREGAR COMENTARIOS SOBRE EL PRODUCTO
         public ActionResult AddReview(int productID, FormCollection getReview)
         {
 
